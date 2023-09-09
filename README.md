@@ -1,4 +1,4 @@
-# Sending logs to AWS CloudWatch with a sidecar pattern
+# Sending logs to AWS CloudWatch with a sidecar pattern and Python
 
 In a Docker Swarm environment, the sidecar pattern is a common architectural approach used to extend the functionality of a primary container without directly modifying it.
 

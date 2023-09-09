@@ -8,7 +8,7 @@ log generator. It will save logs whitin a json format.
 
 The sidecar container is a secondary container that runs alongside the primary container. It's tightly coupled with 
 the primary container and assists it by providing additional services or functionality. In our example, the sidecar 
-resposability will be push logs to AWS CloudWatch. The idea is share a docker volume between both containers. Whit 
+resposability will be push logs to AWS CloudWatch. The idea is sharing a docker volume between both containers. Whit 
 this technique, our primary container will not be affected in network latency generating logs.
 
 The idea is generate something like this:
@@ -137,4 +137,4 @@ LOG_EXTENSION = 'log'
 LOG_PATH = os.getenv('LOG_PATH', Path(BASE_DIR).resolve())
 ```
 
-And thats all. Your logs in CloudWatch uploaded in a background process decoupled from the main process.
+And that's all. Your logs in CloudWatch uploaded in a background process decoupled from the main process.

@@ -12,6 +12,7 @@ resposability will be push logs to AWS CloudWatch. The idea is sharing a docker 
 this technique, our primary container will not be affected in network latency generating logs.
 
 The idea is generate something like this:
+
 ```yaml
 version: '3.6'
 

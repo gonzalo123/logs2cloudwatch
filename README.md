@@ -82,6 +82,7 @@ def init_cloudwatch_stream():
 
 Now we need to upload logs to CloudWatch. We need to use put_log_events. To send multiple logs we need to use a 
 sequenceToken (not the first time). To do that I use this trick.
+
 ```python
 function_parameters = dict(
     logGroupName=LOG_GROUP,
@@ -106,8 +107,7 @@ def get_log_events_from_file(file):
         ) for d in [json.loads(linea) for linea in open(file, 'r')]]
 ```
 
-I like to have all the settings of my application in a file called settings.py. It's a pattern that I've copied from 
-Django. In this file also I read environment variables from a dotenv file.
+I like to have all the settings of my application in a file called settings.py. It's a pattern that I've copied from  Django. In this file also I read environment variables from a dotenv file.
 
 ```python
 import os

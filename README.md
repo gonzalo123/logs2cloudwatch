@@ -2,14 +2,9 @@
 
 In a Docker Swarm environment, the sidecar pattern is a common architectural approach used to extend the functionality of a primary container without directly modifying it.
 
-First there's a primary container. This is the main application or service you want to run within a Docker Swarm 
-service. It's responsible for the core functionality of your application. In our case, this container will be the 
-log generator. It will save logs whitin a json format.
+First there's a primary container. This is the main application or service you want to run within a Docker Swarm service. It's responsible for the core functionality of your application. In our case, this container will be the log generator. It will save logs within a json format.
 
-The sidecar container is a secondary container that runs alongside the primary container. It's tightly coupled with 
-the primary container and assists it by providing additional services or functionality. In our example, the sidecar 
-resposability will be push logs to AWS CloudWatch. The idea is sharing a docker volume between both containers. Whit 
-this technique, our primary container will not be affected in network latency generating logs.
+The sidecar container is a secondary container that runs alongside the primary container. It's tightly coupled with the primary container and assists it by providing additional services or functionality. In our example, the sidecar responsibility will be push logs to AWS CloudWatch. The idea is sharing a docker volume between both containers. Whit this technique, our primary container will not be affected in network latency generating logs.
 
 The idea is generate something like this:
 
